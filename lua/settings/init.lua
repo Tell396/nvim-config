@@ -27,13 +27,13 @@ vim.opt.listchars = { tab = ">>>", trail = "·", precedes = "←", extends = "�
 vim.opt.laststatus = 3
 -- Buffer
 vim.opt.fileformat = 'unix'
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.spelllang = 'it'
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 2
 vim.opt.swapfile = false
 vim.opt.undofile = false
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 -- Window
 vim.opt.number = true
 vim.opt.colorcolumn = "+1"

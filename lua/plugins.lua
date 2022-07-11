@@ -121,8 +121,6 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-dispatch' }
   use { 'tpope/vim-dadbod' }
   use { 'tpope/vim-jdaddy' }
-  use { 'tpope/vim-fugitive' }
-  use { 'github/copilot.vim', config = lua_path"copilot" }
 
   -- Tmux
   use { 'christoomey/vim-tmux-navigator' }

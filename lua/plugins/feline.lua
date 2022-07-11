@@ -19,12 +19,12 @@ local colors = {
   yellow = '#d8a657',
   cyan = '#89b482',
   oceanblue = '#45707a',
-  green = '#a9b665',
+  green = '#e79f05',
   orange = '#e78a4e',
   violet = '#d3869b',
   magenta = '#c14a4a',
-  white = '#a89984',
-  fg = '#a89984',
+  white = '#e9bd85',
+  fg = '#e9bd85',
   skyblue = '#7daea3',
   red = '#ea6962',
 }
@@ -99,7 +99,7 @@ force_inactive.buftypes = {
 
 -- vi-mode
 components.active[1][1] = {
-  provider = ' NV-IDE ',
+  provider = ' windows ',
   hl = function()
     local val = {}
 
@@ -304,7 +304,7 @@ components.active[3][5] = {
   provider = function() return '' .. vim.bo.fileformat:upper() .. '' end,
   hl = {
     fg = 'white',
-    bg = 'bg',
+    bg = '#2a2a2f',
     style = 'bold'
   },
   right_sep = ' '
@@ -319,18 +319,7 @@ components.active[3][6] = {
   },
   right_sep = ' '
 }
--- RVMrubyVersion
--- components.active[3][7] = {
---   provider = function()
---     return ' '..vim.fn['rvm#string']()
---   end,
---   hl = {
---     fg = 'red',
---     bg = 'bg',
---     style = 'bold'
---   },
---   right_sep = ' '
--- }
+
 -- lineInfo
 components.active[3][8] = {
   provider = 'position',

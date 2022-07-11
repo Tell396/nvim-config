@@ -2,10 +2,15 @@ vim.g.gruvbox_material_background = "medium" -- hard, soft, medium
 vim.g.gruvbox_material_palette = "mix" -- original, mix, material
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.gruvbox_material_sign_column_background = 'none'
-vim.cmd 'colorscheme gruvbox-material'
+vim.cmd 'colorscheme monokai'
+
+-- Example of color lightning:
+
 -- #282828 #45403d #5a524c #3a3735 #504945
 -- #34381b #3b4439 #402120 #4c3432 #0e363e #374141 #4f422e #3c3836
 -- #e2cca9 #f2594b #f28534 #e9b143 #b0b846 #8bba7f #80aa9e #d3869b #db4740
+
+vim.opt.termguicolors = true
 
 vim.cmd([[
 hi TelescopePromptBorder guifg=#f28534 guibg=#f28534

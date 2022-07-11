@@ -8,22 +8,22 @@ vim.g.nvim_tree_icons = {
 -- following options are the default
 require'nvim-tree'.setup {
   -- disables netrw completely
-  disable_netrw       = true,
+  disable_netrw       = false,
   -- hijack netrw window on startup
   hijack_netrw        = true,
   -- open the tree when running this setup function
-  open_on_setup       = false,
+  open_on_setup       = true,
   -- will not open on setup if the filetype is in this list
   ignore_ft_on_setup  = {},
   -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
-  open_on_tab         = false,
+  open_on_tab         = true,
   -- hijack the cursor in the tree to put it at the start of the filename
   hijack_cursor       = false,
   -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
   update_cwd          = false,
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
-    enable = false,
+    enable = enable,
     icons = {
       hint = "",
       info = "",
@@ -52,9 +52,9 @@ require'nvim-tree'.setup {
 
   view = {
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
-    width = 50,
+    width = '18%',
     -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
-    height = 30,
+    height = '18%',
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
     side = 'right',
     mappings = {

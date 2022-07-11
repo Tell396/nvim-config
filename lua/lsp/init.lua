@@ -10,22 +10,34 @@ for type, icon in pairs(signs) do
 end
 vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 
+-- HTML, Eruby
 require'lspconfig'.html.setup {
   filetypes = {"html", "eruby"},
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require'lspconfig'.tsserver.setup{
-  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-}
-require'lspconfig'.solargraph.setup{
-  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-}
+
+-- CSS
 require'lspconfig'.cssls.setup{
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+
+-- TypeScript
+require'lspconfig'.tsserver.setup{
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+
+-- Ruby
+require'lspconfig'.solargraph.setup{
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+
+
+-- Docker
 require'lspconfig'.dockerls.setup{
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+
+-- JSON
 require'lspconfig'.jsonls.setup{
   commands = {
     Format = {
@@ -36,15 +48,21 @@ require'lspconfig'.jsonls.setup{
   },
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+
+-- YAML
 require'lspconfig'.yamlls.setup{
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 require'lspconfig'.vimls.setup{
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+
+-- Dart
 require'lspconfig'.dartls.setup{
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+
+-- Rust
 require'lspconfig'.rust_analyzer.setup {
   on_attach = on_attach,
   settings = {

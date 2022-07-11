@@ -11,6 +11,14 @@ require('formatter').setup({
         }
       end
     },
-    -- other formatters ...
+    lua = {
+      -- prettierd
+      function()
+        return {
+          exe = "prettierd",
+          stdin = true
+        }
+      end
+    },
   }
 })
