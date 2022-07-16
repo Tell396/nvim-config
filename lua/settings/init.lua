@@ -10,7 +10,8 @@ vim.opt.showmode = false
 vim.opt.hidden = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-vim.opt.wrapscan = true
+vim.opt.wrapscan = false
+vim.opt.wrap = false
 vim.opt.backup = false
 vim.opt.hlsearch = true
 vim.opt.smartcase = true
@@ -38,7 +39,7 @@ vim.opt.shiftwidth = 2
 
 -- Window
 vim.opt.number = true
-vim.opt.so = 999
+-- vim.opt.so = 999
 -- vim.opt.colorcolumn = "+1"
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 1

@@ -155,5 +155,5 @@ return require('packer').startup(function(use)
   use { 'navarasu/onedark.nvim' }
 
   -- Discord presence
-  use 'andweeb/presence.nvim'
+  use {'andweeb/presence.nvim', config = lua_path"presence" }
 end)
