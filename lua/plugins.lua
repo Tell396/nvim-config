@@ -1,4 +1,4 @@
--- vim.cmd [[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]]
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -84,7 +84,7 @@ return require('packer').startup(function(use)
   use { 'pwntester/octo.nvim', config = lua_path"octo" }
 
   -- Explorer
-  use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvimtree" }
+  use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvimtree", tag = 'nightly' }
 
   -- Color
   use { 'crivotz/nvim-colorizer.lua', config = lua_path"colorizer" }
@@ -129,9 +129,9 @@ return require('packer').startup(function(use)
   use { 'ludovicchabant/vim-gutentags', config = lua_path"vim-gutentags" }
 
   -- Debugger
-  use { 'mfussenegger/nvim-dap', config = lua_path"nvim-dap" }
-  use { 'rcarriga/nvim-dap-ui', config = lua_path"nvim-dap-ui" }
-  use { 'theHamsta/nvim-dap-virtual-text', config = lua_path"nvim-dap-virtual-text" }
+  -- use { 'mfussenegger/nvim-dap', config = lua_path"nvim-dap" }
+  -- use { 'rcarriga/nvim-dap-ui', config = lua_path"nvim-dap-ui" }
+  -- use { 'theHamsta/nvim-dap-virtual-text', config = lua_path"nvim-dap-virtual-text" }
 
   -- General Plugins
   use { 'rcarriga/nvim-notify', config = lua_path"nvim-notify" }
@@ -154,6 +154,7 @@ return require('packer').startup(function(use)
   use { 'tanvirtin/monokai.nvim' }
   use { 'navarasu/onedark.nvim' }
 
-  -- Discord presence
-  use {'andweeb/presence.nvim', config = lua_path"presence" }
+  -- Other
+  use { 'andweeb/presence.nvim', config = lua_path"presence" } -- Discord presence
+  use { 'wakatime/vim-wakatime' } -- WakaTime
 end)
